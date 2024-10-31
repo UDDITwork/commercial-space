@@ -1,0 +1,2257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelance Web Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Include Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- CSS File Link -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* General Styling */
+body {
+  font-family: 'Cardo', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #8ebeea;
+  overflow-x: hidden;
+}
+.nokia-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      background: black;
+      border-radius: 2%;
+      flex-wrap: wrap; /* Wraps cards on smaller screens */
+    }
+
+   
+.cow{
+  color:#0f0;
+}
+.view-details-btn {
+      background-color: white;
+      color: rgb(239, 229, 229);
+      padding: 10px 15px;
+      font-size: 0.8rem;
+      border: inherit;
+    
+      cursor: pointer;
+      display: inline-block;
+
+
+      background: linear-gradient(135deg, #8e44ad, #3498db); /* Gradient background */
+  
+  font-size: 1.2rem;
+  padding: 20px;
+  border-radius: 10%; /* Rounded corners */
+  position: relative;
+  overflow: hidden;
+  border:#0f0 10px ;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    }
+    /* Outer Container */
+    .nokia-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 90%;
+      margin: 20px auto;
+      padding: 20px;
+      background: black;
+      border-radius: 2%;
+      position: relative;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+
+
+
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 90%;
+      margin: 20px auto;
+      padding: 20px;
+      background: black;
+      border-radius: 2%;
+      position: relative;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    /* Glitter Effect */
+    .nokia-container:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 2%;
+      mix-blend-mode: overlay;
+      pointer-events: none;
+      animation: glitter 3s linear infinite;
+    }
+    @keyframes glitter {
+      0% { background-position: 0 0; }
+      100% { background-position: 100% 100%; }
+    }
+
+    /* Uddit Divs */
+    .uddit-div {
+      background: #000000cc;
+      border-radius: 2%;
+      width: 45%;
+      max-width: 200px;
+      min-height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      transition: transform 0.4s ease;
+      cursor: pointer;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      perspective: 1000px;
+
+      
+
+      background: #000;
+      border-radius: 25%;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      transition: transform 0.4s ease;
+      cursor: pointer;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      perspective: 1000px;
+    
+    }
+    .uddit-div:hover {
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Plus Button */
+    .plus-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      background: #fff;
+      color: black;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    /* Flip Card Styles */
+    .flip-card-uddit {
+      position: absolute;
+      transform-style: preserve-3d;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      border-radius: 25%;
+     
+    }
+    .flip-card-uddit.flipped {
+      transform: rotateY(180deg);
+    }
+
+    /* Flip Card Front & Back */
+    .flip-card-front
+     {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #e74c3c; /* Red background */
+      color: #fff; /* White text */
+      padding: 20px;
+      border-radius: 25%;
+      border: 3px solid;
+      animation: shimmer 3s infinite linear;
+      position: absolute;
+      width: 80%;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      backface-visibility: hidden;
+      background: #2c3e50; /* Dark blue background */
+      border-radius: 25%;
+      border: 2px solid transparent;
+      animation: shimmer 3s linear infinite;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+     
+    }
+    .flip-card-back{ position: absolute;
+      width: 80%;
+      height: 90%;
+      backface-visibility: hidden;
+      border-radius: inherit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      padding: 10px;
+
+    }
+    .flip-card-front img{
+      width: 50px; /* Adjust the size as needed */
+      height: 50px;
+       
+      margin-bottom: 10px;
+
+
+      width: 100px;
+      height: 100px;
+      border-radius: 10%; /* Rounded corners */
+      margin-bottom: 10px;
+    }
+    .flip-card-back {
+       overflow-y: auto;
+/*baad me dekhna he ki overflow-y:auto ya overflow:hidden kya lagana he */
+      position: absolute;
+      width: 80%;
+      height: 90%;
+      backface-visibility: hidden;
+      border-radius: 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      background: #a158e6;
+      transform: rotateY(180deg);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+    .red-background-text {
+      font-size: 1rem; /* Standard text size */
+      font-weight: bold; /* Bold white text */
+      color: #fff; /* White text color */
+      background-color: #1f0f61; /* Red background */
+      padding: 8px 16px; /* Padding to add spacing */
+      border-radius: 5px; /* Rounded corners */
+      display: inline-block; /* Keeps it inline */
+      text-align: center;
+    }
+    /* Information Card */
+    .info-card {
+     width: 90%;
+    max-width: 300px;
+    max-height: 400px; /* Fixed height for scrollability */
+    padding: 20px;
+    background: #1a1a1a;
+    color: white;
+    border-radius: 5%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    font-size: 0.9rem;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    overflow-y: auto; /* Enables vertical scrolling */
+    }
+    .info-card.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Information List Styling */
+    .info-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .info-list li {
+      margin-bottom: 15px;
+    }
+    .info-list li::before {
+      content: "• ";
+      color: #3498db;
+    }
+    .info-card.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Information List Styling */
+  .info-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .info-list li {
+    margin-bottom: 15px;
+  }
+  .info-list li::before {
+    content: "• ";
+    color: #3498db;
+  }
+
+  /* Custom Scrollbar Styling for the Info Card */
+  .info-card::-webkit-scrollbar {
+    width: 8px;
+  }
+  .info-card::-webkit-scrollbar-thumb {
+    background-color: #3498db;
+    border-radius: 4px;
+  }
+/* Styling for the Div with Circular Corners, Border, and Hover Shadow */
+.styled-div {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 15px; /* Circular corners */
+  border: 2px solid #3498db; /* Border around the div */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover Effect: Shadow and Scale */
+.styled-div:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+  transform: translateY(-5px); /* Slight upward movement on hover */
+}
+
+/* Main Rectangle Div Styling */
+.animated-div {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin: 50px auto;
+  max-width: 800px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+}
+
+/* Hover Effect for Main Div */
+.animated-div:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Container (Left - 20%) */
+.image-container {
+  flex: 0 0 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.high{
+  display: inline-block;
+  padding: 2px 6px;
+  background-color: rgb(57, 24, 43);
+  color: white;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+/* Text Container (Right - 80%) */
+.text-container {
+  flex: 0 0 80%;
+  padding-left: 20px;
+  text-align: left;
+}
+/* CSS for the `.joker` Class */
+.mithai {
+  display: inline-block;
+  padding: 2px 6px;
+  background-color: red;
+  color: white;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+/* Button Styling */
+.scroll-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.internship-container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: linear-gradient(135deg, #171184, #e0e0e0);
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      overflow-wrap: break-word; /* Word wrapping for long text */
+    }
+
+ /* Internship Container Styling */
+.internship-container {
+  max-width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow Effect */
+  transition: transform 0.3s ease; /* Hover effect */
+}
+
+.internship-container:hover {
+  transform: scale(1.02);
+}
+
+/* Title Styling */
+.internship-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Internship Slider Styling */
+.internship-slider {
+  display: flex;
+  transition: transform 0.5s ease; /* Smooth slide transition */
+  width: 100%;
+}
+
+/* Internship Item Styling */
+.internship-item {
+  flex: 0 0 100%; /* Occupy full width of container */
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 10px; /* Spacing between slides */
+  transition: transform 0.3s ease;
+}
+
+/* h3 Hover Effect */
+.internship-item h3 {
+  font-size: 1.2rem;
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+.internship-item h3:hover {
+  color: #3498db; /* Change color on hover */
+}
+
+/* Responsive Bullet Points */
+.internship-item ul {
+  padding-left: 20px;
+  margin: 10px 0;
+  list-style-type: disc;
+  color: #333;
+}
+
+.internship-item li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+/* Button Styling */
+.internship-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.internship-controls button {
+  padding: 10px 15px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #020118, #902121);
+  transition: background 0.3s ease;
+}
+
+.internship-controls button:hover {
+  background: linear-gradient(135deg, #902121, #020118); /* Hover effect */
+}
+
+/* Responsive Font Sizes */
+.kohan {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .kohan {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .kohan {
+    font-size: 0.8rem;
+  }
+  .internship-item ul {
+    padding-left: 15px;
+  }
+}
+       .mohan{
+      max-width: 450px;
+      margin: 20px auto;
+      background-color: #9281bd; /* Dark background color for contrast */
+      border: 3px solid #ffffff; /* 3px solid white border */
+      border-radius: 10px; /* Optional: rounded corners */
+     
+      color: rgb(253, 253, 253);
+      
+      align-items: center;
+      overflow:hidden;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(228, 224, 224, 0.2); /* Optional: shadow for depth */
+}
+
+.scroll-button:hover {
+  background-color: #2980b9;
+}
+
+/* Bottom Slider Section */
+.bottom-slider {
+  background-color: #fafafa;
+  padding: 50px 20px;
+  border-top: 2px solid #3498db;
+  margin-top: 50px;
+  text-align: center;
+  display: none; /* Initially hidden */
+}
+/* Container for Buttons */
+.container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        /* Violet Buttons with white text */
+        .algo-button {
+            background-color: #8A2BE2; /* Violet */
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.5);
+        }
+
+        .algo-button:hover {
+            transform: scale(1.1);
+            background-color: #7A1EBB; /* Darker violet on hover */
+        }
+
+        /* Algorithm Information Blocks */
+        .algo-block {
+            width: 80%;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            display: none;
+            transition: opacity 0.5s ease-in-out;
+            color: #fff;
+        }
+
+        .algo-block.active {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Algorithm Titles */
+        .algo-title {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        /* Algorithm Description */
+        .algo-description {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        /* Code Box */
+        .algo-code {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            font-family: monospace;
+            font-size: 1rem;
+            color: #0f0;
+            overflow-x: auto;
+            max-height: 200px;
+        }
+
+        /* Smooth Scrolling */
+        .scrolling-effect {
+            scroll-behavior: smooth;
+        }
+
+        /* Scrollbar Customization */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #8A2BE2;
+            border-radius: 10px;
+        }/* CSS for the `.joker` Class */
+.joker {
+  display: inline-block;
+  padding: 2px 6px;
+  background-color: rgb(77, 130, 199);
+  color: white;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+        
+    .container {
+          position: relative;
+          width: 90%;
+          max-width: 1200px;
+          display: flex;
+          justify-content: space-between;
+        
+        }
+    
+        .algo-button {
+  position: relative;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  width: 300px;
+  height: 200px;
+  margin-right: -60px; /* To create the overlap effect */
+  border-radius: 15px; /* Rounded corners */
+  border: 2px solid white; /* White border around the algo-button */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left; /* Align the text to the left */
+  transition: transform 0.3s ease-in-out;
+}
+
+.algo-button:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  z-index: 10;
+}
+.kohan{
+  display: inline-block;
+  padding: 2px 6px;
+  background-color: rgb(229, 217, 217);
+  color: white;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+        .algo-button:nth-child(2) {
+          margin-left: -20%;
+        }
+    
+        .algo-button:nth-child(3) {
+          margin-left: -20%;
+        }
+    
+        .algo-button:nth-child(4) {
+          margin-left: -20%;
+        }
+    
+        .algo-button:nth-child(5) {
+          margin-left: -20%;
+        }
+    
+        .algo-button:nth-child(6) {
+          margin-left: -20%;
+        }
+    
+        .algo-button:nth-child(7) {
+          margin-left: -20%;
+        }
+    
+        .algo-button:nth-child(8) {
+          margin-left: -20%;
+        }
+    
+        .algo-button:nth-child(9) {
+          margin-left: -20%;
+        }
+    
+        .algo-button:nth-child(10) {
+          margin-left: -20%;
+        }
+    
+        /* Media queries for responsiveness */
+        @media (max-width: 1024px) {
+          .algo-button {
+            width: 40%;
+            height: 150px;
+          }
+        }
+    
+        @media (max-width: 768px) {
+          .algo-button {
+            width: 60%;
+            height: 120px;
+          }
+          .algo-button:nth-child(2),
+          .algo-button:nth-child(3),
+          .algo-button:nth-child(4),
+          .algo-button:nth-child(5),
+          .algo-button:nth-child(6),
+          .algo-button:nth-child(7),
+          .algo-button:nth-child(8),
+          .algo-button:nth-child(9),
+          .algo-button:nth-child(10) {
+            margin-left: -15%;
+          }
+        }
+        @keyframes shimmer {
+      0% {
+        border-color: #e74c3c;
+      }
+      50% {
+        border-color: #3498db;
+      }
+      100% {
+        border-color: #e74c3c;
+      }
+    }
+        @media (max-width: 480px) {
+          .algo-button {
+            width: 80%;
+            height: 100px;
+          }
+          .algo-button:nth-child(2),
+          .algo-button:nth-child(3),
+          .algo-button:nth-child(4),
+          .algo-button:nth-child(5),
+          .algo-button:nth-child(6),
+          .algo-button:nth-child(7),
+          .algo-button:nth-child(8),
+          .algo-button:nth-child(9),
+          .algo-button:nth-child(10) {
+            margin-left: -10%;
+          }
+        }
+  /* Stylish Heading */
+  
+    .styled-heading {
+      font-size: 1rem; /* Similar to normal text size */
+      font-weight: bold;
+      color: #000; /* Black text color */
+      text-align: center;
+      padding: 8px 16px; /* Lighter padding */
+      margin: 10px auto;
+      display: inline-block;
+      border-radius: 5px;
+      background: linear-gradient(90deg, #3498db, #ffffff, #e74c3c); /* Blue-white-red gradient */
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      letter-spacing: 0.5px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow:hidden;
+  }/* Hover Effect for Extra Style */
+    .styled-heading:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .mohan{
+      max-width: 450px;
+      
+      background: linear-gradient(135deg, #020118, #902121);
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+    .mohan:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+.kohan:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}/* Internship Container Styling */
+.internship-container {
+  max-width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  overflow: hidden; /* Prevent extra items from showing */
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow Effect */
+  transition: transform 0.3s ease; /* Hover effect */
+}
+
+.internship-container:hover {
+  transform: scale(1.02);
+}
+
+/* Title Styling */
+.internship-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Internship Slider Styling */
+.internship-slider {
+  display: flex; /* Flexbox layout for horizontal sliding */
+  transition: transform 0.5s ease; /* Smooth slide transition */
+  width: 100%;
+}
+
+/* Internship Item Styling */
+.internship-item {
+  min-width: 100%; /* Each item takes full width of container */
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* h3 Hover Effect */
+.internship-item h3 {
+  font-size: 1.2rem;
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+.internship-item h3:hover {
+  color: #3498db; /* Change color on hover */
+}
+
+/* Responsive Bullet Points */
+.internship-item ul {
+  padding-left: 20px;
+  margin: 10px 0;
+  list-style-type: disc;
+  color: #333;
+}
+
+.internship-item li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+/* Button Styling */
+.internship-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.internship-controls button {
+  padding: 10px 15px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #020118, #902121);
+  transition: background 0.3s ease;
+}
+
+.internship-controls button:hover {
+  background: linear-gradient(135deg, #902121, #020118); /* Hover effect */
+}
+.uddit-div:hover{
+  transform: scale(1.03);
+      box-shadow: 0 4px 10px rgba(233, 228, 228, 0.2);
+}
+.nokia-container:hover{
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgb(219, 223, 222);
+}
+/* Responsive Font Sizes */
+.kohan {
+  font-size: 1rem;
+  color:black;
+}
+
+@media (max-width: 768px) {
+  .kohan {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .kohan {
+    font-size: 0.8rem;
+  }
+  .internship-item ul {
+    padding-left: 15px;
+  }
+} 
+.story{
+  display:flex;
+}
+.info-card {
+      width: 90%;
+      max-width: 300px;
+      max-height: 400px;
+      padding: 20px;
+      background: #1a1a1a;
+      color: white;
+      border-radius: 5%;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      font-size: 0.9rem;
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      overflow-y: auto;
+    }
+    .info-card.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .flutter-container {
+  background-color: #1A1A2E;
+  color: #FFFFFF;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+}
+
+.flutter-header h2 {
+  color: #2196F3;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.skills-section, .tools-section, .projects-section, .learning-section {
+  margin-top: 20px;
+}
+
+.skills-section h3, .tools-section h3, .projects-section h3, .learning-section h3 {
+  color: #4CAF50;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.skills-section ul, .tools-section ul, .projects-section ul, .learning-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.skills-section li, .tools-section li, .projects-section li, .learning-section li {
+  margin-bottom: 12px;
+}
+
+.skills-section li strong, .tools-section li strong, .projects-section li strong, .learning-section li strong {
+  color: #FFEB3B;
+}
+
+.flutter-header p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #B0BEC5;
+}
+
+.flutter-container a {
+  color: #FFEB3B;
+  text-decoration: underline;
+}
+
+.flutter-container a:hover {
+  color: #FFCA28;
+}
+
+.portfolio-container:hover{
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgb(219, 223, 222);
+}   /* Pink Div Styling */
+.story {
+      display: flex;
+      flex-wrap: wrap; /* Allows wrapping for responsive design */
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px; /* Sets a max-width to keep content centered */
+      justify-content: center;
+    }
+
+   
+
+    /* Pink Div Styling */
+    .pink-div {
+      background-color: #FFC0CB;
+      width: calc(25% - 20px); /* 1x4 layout by default */
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    /* Image Styling */
+    .pink-div img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    /* Button Styling */
+    .pink-div a {
+      display: inline-block;
+      background-color: #FF0000;
+      color: #FFFFFF;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    .pink-div a:hover {
+      background-color: #C70000;
+    }
+
+    .pink-div:hover {
+      transform: scale(1.05);
+    }
+
+    /* Media Queries for 2x2 Layout on Mobile Screens */
+    @media (max-width: 768px) {
+      .pink-div {
+        width: calc(50% - 20px); /* 2x2 grid for smaller screens */
+      }
+    }
+    @media (max-width: 768px) {
+      .pink-div {
+        width: calc(50% - 20px); /* 2x2 layout for screens below 768px */
+      }
+    }
+      /* Medventure Container Styling */
+      .medventure {
+      display: flex;
+      flex-wrap: wrap; /* Allows wrapping for responsive design */
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      justify-content: center;
+    }
+
+    /* Image Div Styling */
+    .image-div {
+      background-color: #FFC0CB;
+      width: calc(12.5% - 20px); /* 8 images in a row for large screens */
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    /* Image Styling */
+    .image-div img {
+      width: 100%; /* Fit image to div */
+      height: auto;
+      max-height: 100px; /* Limit max height */
+      object-fit: cover; /* Maintain aspect ratio and cover the area */
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .image-div:hover {
+      transform: scale(1.05);
+    }
+
+    /* Responsive Layout for Medium Screens */
+    @media (max-width: 1024px) {
+      .image-div {
+        width: calc(25% - 20px); /* 4 images per row */
+      }
+    }
+
+    /* Responsive Layout for Small Screens */
+    @media (max-width: 768px) {
+      .image-div {
+        width: calc(50% - 20px); /* 2x4 grid */
+      }
+    }
+
+    /* Responsive Layout for Extra Small Screens */
+    @media (max-width: 480px) {
+      .image-div {
+        width: calc(100% - 20px); /* Stacks vertically for very small screens */
+      }
+    }
+     /* Lively Container Styling */
+     .lively {
+      display: flex;
+      flex-wrap: wrap; /* Allows wrapping for responsive design */
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      justify-content: center;
+    }
+
+    /* Image Div Styling */
+    .career-div {
+      background-color: #FFC0CB;
+      width: calc(12.5% - 20px); /* 8 images in a row for large screens */
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    /* Image Styling */
+    .career-div img {
+      width: 100%; /* Fit image to div */
+      height: auto;
+      max-height: 100px; /* Limit max height */
+      object-fit: cover; /* Maintain aspect ratio and cover the area */
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .career-div:hover {
+      transform: scale(1.05);
+    }
+
+    /* Responsive Layout for Medium Screens */
+    @media (max-width: 1024px) {
+      .career-div {
+        width: calc(25% - 20px); /* 4 images per row */
+      }
+    }
+
+    /* Responsive Layout for Small Screens */
+    @media (max-width: 768px) {
+      .career-div {
+        width: calc(50% - 20px); /* 2x4 grid */
+      }
+    }
+
+    /* Responsive Layout for Extra Small Screens */
+    @media (max-width: 480px) {
+      .career-div {
+        width: calc(100% - 20px); /* Stacks vertically for very small screens */
+      }
+    }
+    /* Chief-div Container Styling */
+    .chief-div {
+      display: flex;
+      flex-wrap: wrap; /* Allows wrapping for responsive design */
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      justify-content: center;
+    }
+
+    /* Image Div Styling */
+    .zydus {
+      background-color: #FFC0CB;
+      width: calc(12.5% - 20px); /* 8 images in a row for large screens */
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    /* Image Styling */
+    .zydus img {
+      width: 100%; /* Fit image to div */
+      height: auto;
+      max-height: 100px; /* Limit max height */
+      object-fit: cover; /* Maintain aspect ratio and cover the area */
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .zydus:hover {
+      transform: scale(1.05);
+    }
+
+    /* Responsive Layout for Medium Screens */
+    @media (max-width: 1024px) {
+      .zydus {
+        width: calc(25% - 20px); /* 4 images per row */
+      }
+    }
+
+    /* Responsive Layout for Small Screens */
+    @media (max-width: 768px) {
+      .zydus {
+        width: calc(50% - 20px); /* 2x4 grid */
+      }
+    }
+
+    /* Responsive Layout for Extra Small Screens */
+    @media (max-width: 480px) {
+      .zydus {
+        width: calc(100% - 20px); /* Stacks vertically for very small screens */
+      }
+    }
+    .story {
+  display: flex;               /* Enable flexbox layout */
+  flex-wrap: wrap;             /* Allow divs to wrap if needed */
+  gap: 10px;                   /* Adjust spacing between divs */
+  justify-content: space-between; /* Even spacing between boxes */
+  padding: 10px;               /* Optional padding for the story container */
+}
+
+.pink-div {
+  flex: 1 1 22%;               /* Make each box about 22% width */
+  box-sizing: border-box;      /* Include padding/border in element’s width */
+  padding: 10px;               /* Add padding inside each box */
+  text-align: center;          /* Center align the content */
+  background-color: pink;      /* Pink background color */
+  border-radius: 8px;          /* Optional: round the corners */
+}
+
+.pink-div img {
+  width: 100%;                 /* Make image responsive within div */
+  height: auto;                /* Maintain aspect ratio */
+  border-radius: 5px;          /* Optional: round image corners */
+}
+
+.pink-div a {
+  display: inline-block;
+  margin-top: 8px;             /* Space between image and link */
+  text-decoration: none;       /* Remove underline from link */
+  color: white;                /* White text color */
+  background-color: #333;      /* Dark background for the button */
+  padding: 5px 10px;           /* Button padding */
+  border-radius: 4px;          /* Round button corners */
+}
+</style>
+    </head>
+<body>
+ <div class="animated-div">
+    <!-- Circular Image on the Left (20%) -->
+    <div class="image-container">
+      <img src="uddit.jpeg" alt="Uddit" class="profile-image">
+    </div>
+    
+    <!-- Text and Button on the Right (80%) -->
+    <div class="text-container">
+      <h2>Hi ! My name is Uddit .</h2>
+      <p>
+        I am a full-stack web developer specializing in creating scalable and user-friendly web applications. 
+        Explore my projects and feel free to connect for more information.
+      </p>
+      <button class="scroll-button" onclick="scrollToSlider()">Click Me !</button>
+    </div>
+  </div>
+  <div class="internship-container">
+    <div class="internship-title mohan" style="max-width:200px;color:white">Internships</div>
+    <div class="internship-slider" id="internshipSlider">
+      <div class="internship-item">
+        <h3 class="kohan">1. Hyperlink Infosystems - App Developer</h3><br>
+        <p class="kohan">Duration: May 6 - July 31, 2024</p>
+        <ul>
+          <li>Developed scalable mobile applications, focusing on user engagement and performance optimization.</li>
+          <li>Implemented advanced UI/UX features to enhance usability.</li>
+          <li>Collaborated with cross-functional teams to meet project goals.</li>
+        </ul>
+      </div>
+      
+      <div class="internship-item">
+        <h3 class="kohan">2. WOLDOMAINIA - Digital Marketing & Internet Services</h3><br>
+        <p class="kohan">Duration: May - July 2023</p>
+        <ul>
+          <li>Developed Responsive Web Interfaces with HTML, CSS, JavaScript, and React.</li>
+          <li>Integrated RESTful APIs for dynamic data and real-time updates.</li>
+          <li>Optimized performance, reducing load time by 30%.</li>
+        </ul>
+      </div>
+      
+      <div class="internship-item">
+        <h3 class="kohan">3. The Vintage Foods - Tech-Stack Developer</h3><br>
+        <p class="kohan">Duration: Dec 2022 - May 2023</p>
+        <ul>
+          <li>Developed robust Backend APIs using Node.js and Express.</li>
+          <li>Managed databases with MongoDB and MySQL for optimized performance.</li>
+          <li>Ensured security with JWT authentication and encryption protocols.</li>
+        </ul>
+      </div>
+      
+      <div class="internship-item">
+        <h3 class="kohan">4. Zooner - Developer</h3><br>
+        <p class="kohan">Duration: December 2022 to May 2023<br>Worked at Zooner, a company similar to Blinkit, focusing on frontend and backend integration for seamless delivery operations.</p>
+        <ul>
+          <li>Developed front-end features with React and Bootstrap.</li>
+          <li>Integrated backend APIs for seamless data flow.</li>
+          <li>Improved delivery tracking and order management efficiency.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="internship-controls">
+      <button class="mohan" onclick="moveInternshipSlide(-1)"> < </button>
+      <button class="mohan" onclick="moveInternshipSlide(1)"> > </button>
+    </div>
+  </div>
+   
+  
+  <div class="nokia-container">
+
+    <div class="uddit-div" onclick="toggleFlip(this, 'website-development')">
+      <div class="toggle-button plus-button">+</div>
+      <div class="flip-card-uddit">
+        <div class="flip-card-front red-background-text">
+          <img src="one.jpg" alt="App Dev Icon">
+          <br>WEBSITE DEVELOPMENT
+        </div>
+        <div class="flip-card-back">
+          <button onclick="showInfo(event, 'website-development')" class="view-details-btn">View Details</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- UI/UX Section -->
+    <div class="uddit-div" onclick="toggleFlip(this, 'ui-ux')">
+      <div class="toggle-button plus-button">+</div>
+      <div class="flip-card-uddit">
+        <div class="flip-card-front red-background-text">
+          <img src="two.jpg" alt="UI/UX Icon">
+          <br>UI/UX
+        </div>
+        <div class="flip-card-back">
+          <button onclick="showInfo(event, 'ui-ux')" class="view-details-btn">View Details</button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- AI/ML Integration Section -->
+    <div class="uddit-div" onclick="toggleFlip(this, 'ai-ml')">
+      <div class="toggle-button plus-button">+</div>
+      <div class="flip-card-uddit">
+        <div class="flip-card-front red-background-text">
+          <img src="three.jpg" alt="AI/ML Icon">
+          <br>AI/ML INTEGRATION
+        </div>
+        <div class="flip-card-back">
+          <button onclick="showInfo(event, 'ai-ml')" class="view-details-btn">View Details</button>
+        </div>
+      </div>
+    </div>
+  
+     <!-- App Development Section -->
+  <div class="uddit-div" onclick="toggleFlip(this, 'app-development')">
+    <div class="toggle-button plus-button">+</div>
+    <div class="flip-card-uddit">
+      <div class="flip-card-front red-background-text">
+        <img src="four.jpg" alt="App Dev Icon">
+        <br>APP DEVELOPMENT
+      </div>
+      <div class="flip-card-back">
+        <button onclick="showInfo(event, 'app-development')" class="view-details-btn">View Details</button>
+      </div>
+    </div>
+  </div>
+  <div class="info-card" id="infoCard">
+     <ul class="info-list" id="infoContent">
+      <!-- Dynamic content goes here -->
+    </ul>
+  </div>
+
+  <div class="info-card" id="infoCard">
+    <ul class="info-list">
+      <li><strong class="styled-heading">Programming Languages (Java, Swift, Kotlin, JavaScript, Python, etc.)</strong><br><p class="red-background-text">Java/Kotlin (Android Development):</p><hr> Deep knowledge of Java and Kotlin is essential for Android development, as these languages enable smooth integration with Android’s native libraries and APIs, allowing developers to create efficient, user-friendly apps.<br>
+        <p class="red-background-text">Swift (iOS Development):</p><hr> Mastery of Swift is crucial for building iOS applications that are fast, safe, and memory efficient, supporting advanced Apple features and functionalities like ARKit and CoreML.<br>
+        <p class="red-background-text">JavaScript (React Native, Ionic):</p><hr> JavaScript enables cross-platform development through frameworks like React Native and Ionic, allowing for efficient mobile apps with a single codebase that works on both iOS and Android.<br></li>
+      <li><strong class="styled-heading"> Cross-Platform Development</strong><br><p class="red-background-text">React Native:</p><hr> Proficiency with React Native is valuable for building cross-platform applications, allowing code reusability across Android and iOS, which accelerates development and reduces maintenance overhead.<br>
+        <p class="red-background-text">Flutter:</p><hr> Knowledge of Google’s Flutter framework is essential for creating visually appealing, performant apps using a single codebase, ideal for rapid prototyping and building applications for multiple platforms simultaneously.<br></li>
+      <li><strong class="styled-heading">UI/UX Design Principles</strong><br><p class="red-background-text">User Interface (UI) Design:</p><hr> Understanding layout, color theory, typography, and responsiveness is key to building visually pleasing, accessible apps.<br> Familiarity with UI design tools like Sketch, Figma, and Adobe XD can help in quickly creating intuitive, prototype user interfaces.<br>
+        <p class="red-background-text">User Experience (UX):</p><hr> Knowledge of usability testing, user research, and interaction design principles allows developers to build intuitive, smooth, and engaging user experiences tailored to target audiences.<br></li>
+      <!-- Add additional points as needed -->
+      <li><strong class="styled-heading">APIs and Backend Integration</strong><br><p class="red-background-text">RESTful APIs:</p><hr> Understanding RESTful API principles allows for seamless interaction between mobile applications and backend services, facilitating the efficient exchange of data and functions.<br>
+        <p class="red-background-text">GraphQL:</p><hr> Skills in GraphQL, an alternative API approach, allow for fetching exactly the data needed, optimizing performance and flexibility for complex queries and data-heavy applications.<br>
+        <p class="red-background-text">Firebase:</p><hr> Familiarity with Firebase, a Google-backed BaaS (Backend-as-a-Service), is beneficial for quickly implementing features like real-time databases, cloud storage, authentication, and push notifications.<br></li>
+      <li><strong class="styled-heading">Data Management and Databases</strong><br><p class="red-background-text">SQLite and Room (Android):</p><hr> For local data storage on Android, knowledge of SQLite and the Room persistence library ensures efficient data management, enabling offline functionality and enhanced user experience.<br>
+        <p class="red-background-text">Core Data (iOS):</p><hr> Understanding Core Data is essential for iOS app developers, as it provides an effective way to store app data locally while supporting complex data structures.<br>
+        <p class="red-background-text">NoSQL Databases (Firebase Firestore, MongoDB):</p><hr> Skills in NoSQL databases like Firestore and MongoDB are essential for apps requiring high scalability, quick real-time updates, and flexible schema management.<br></li>
+      <li><strong class="styled-heading">App Architecture Patterns (MVC, MVVM, MVP)</strong><br><p class="red-background-text">MVC (Model-View-Controller):</p><hr> A strong grasp of the MVC pattern is foundational, as it organizes code logically and improves code maintainability, especially in iOS apps.<br>
+        <p class="red-background-text">MVVM (Model-View-ViewModel):</p><hr> MVVM is commonly used in Android and is particularly useful for apps with complex UIs.<br> It separates logic from UI and is conducive to unit testing and scalability.<br>
+        <p class="red-background-text">MVP (Model-View-Presenter):</p><hr> MVP is helpful in keeping business logic separate from the UI in Android applications, making the codebase modular, easier to maintain, and adaptable to future changes.<br></li>
+      <!-- Add additional points as needed -->
+      <li><strong class="styled-heading">Testing and Debugging</strong><br><p class="red-background-text">Unit Testing:</p><hr> Knowledge of unit testing frameworks like JUnit (Android) and XCTest (iOS) is crucial for ensuring individual components work as expected, reducing bugs and improving code quality.<br>
+        <p class="red-background-text">UI Testing (Espresso, XCTest):</p><hr> Familiarity with UI testing frameworks like Espresso (Android) and XCTest (iOS) ensures the app’s visual and interactive elements function seamlessly.<br>
+        <p class="red-background-text">Debugging Tools:</p> Proficiency with debugging tools like Android Studio’s debugger, Xcode’s Instruments, and tools for network traffic (e.g., Charles Proxy) is essential for identifying and fixing issues efficiently.<br></li>
+      <li><strong class="styled-heading">Version Control (Git)</strong><br><p class="red-background-text">Proficiency in Git</p> (using platforms like GitHub, GitLab, or Bitbucket) is critical for managing code changes, collaborating with teams, and keeping code history organized, especially in agile environments.<br></li>
+      <li><strong class="styled-heading">Cloud Services and DevOps</strong><br><p class="red-background-text">AWS and Azure:</p><hr> Familiarity with cloud services like AWS and Azure for hosting backend services, media files, and supporting scalable databases allows app developers to build highly available and performant applications.<br>
+        <p class="red-background-text">CI/CD (Continuous Integration/Continuous Deployment):</p><hr> Knowledge of CI/CD pipelines, using tools like Jenkins, Bitrise, and GitHub Actions, allows for automated testing and deployment, improving the development cycle and reducing time-to-market.<br></li>
+      <!-- Add additional points as needed -->
+      <li><strong class="styled-heading">Security</strong><br><p class="red-background-text">Data Encryption:</p><hr> Skills in data encryption, both for local data storage and data transmission (e.g., SSL/TLS), ensure user information remains protected and meets regulatory requirements.<br>
+        <p class="red-background-text">Authentication and Authorization (OAuth, JWT):</p><hr> Understanding of secure authentication protocols like OAuth and JWT is essential for managing user access and protecting sensitive app data.<br>
+        <p class="red-background-text">Secure Coding Practices:</p><hr> Knowledge of secure coding practices, such as input validation and safe data storage, is fundamental to prevent vulnerabilities like SQL injection, XSS, and data leaks.<br></li>
+    </ul>
+</div>
+</div>
+<!-- First Image Grid Section -->
+  <h1 class="mohan">What You Can Expect</h1>
+
+    <!-- Your Grid Items Here -->
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="https://landing.thimpress.com/wp-content/uploads/2024/02/classy-fea-1.png" alt="Image 1">
+        <p>Welcome Page</p>
+      </div>
+      <div class="grid-item">
+        <img src="https://landing.thimpress.com/wp-content/uploads/2024/02/classy-fea-2.png" alt="Image 2">
+        <p>Product Grid & Sliders</p>
+      </div>
+      <div class="grid-item">
+        <img src="https://landing.thimpress.com/wp-content/uploads/2024/03/Mask-group.png" alt="Image 3">
+        <p>Store Details</p>
+      </div>
+      <div class="grid-item">
+        <img src="https://landing.thimpress.com/wp-content/uploads/2024/03/seo-optimized-coma.png" alt="Image 4">
+        <p>Google Fonts</p>
+      </div>
+      <div class="grid-item">
+        <img src="https://landing.thimpress.com/wp-content/uploads/2024/02/classy-fea-7.png" alt="Image 5">
+        <p>Login/Landing Pages</p>
+      </div>
+      <div class="grid-item">
+        <img src="https://landing.thimpress.com/wp-content/uploads/2024/02/classy-fea-5.png" alt="Image 6">
+        <p>Product Details</p>
+      </div>
+      <div class="grid-item">
+        <img src="https://landing.thimpress.com/wp-content/uploads/2024/03/mega-menu.png" alt="Image 7">
+        <p>Footer Navigations</p>
+      </div>
+      <div class="grid-item">
+        <img src="https://landing.thimpress.com/wp-content/uploads/2024/02/classy-fea-11.png" alt="Image 8">
+        <p>Sales Data</p>
+      </div>
+      <div class="grid-item">
+        <img src="https://landing.thimpress.com/wp-content/uploads/2024/02/classy-fea-12.png" alt="Image 9">
+        <p>Attractive Google Fonts</p>
+      </div>
+    </div>
+  
+    <!-- Second Image Grid Section -->
+    <h1 style="display: flex; justify-content: center; align-items: center; text-align: center;">EXEMPLARY E-COM WORK</h1>
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="https://landing.vinovathemes.com/furstore/assets/img/i-4.jpg" alt="Ecom Image 1">
+        <p>Home Page Animations</p>
+      </div>
+      <div class="grid-item">
+        <img src="https://landing.vinovathemes.com/furstore/assets/img/i-5.jpg" alt="Ecom Image 2">
+        <p>Product-Grid View & Mobile Responsive</p>
+      </div>
+      <div class="grid-item">
+        <img src="https://landing.vinovathemes.com/furstore/assets/img/i-6.jpg" alt="Ecom Image 3">
+        <p>Faster Page Reloads</p>
+      </div>
+      <div class="grid-item">
+        <img src="https://landing.vinovathemes.com/furstore/assets/img/i-7.jpg" alt="Ecom Image 4">
+        <p>Distinct Categories Banners</p>
+      </div>
+      <div class="grid-item">
+        <img src="https://landing.vinovathemes.com/furstore/assets/img/i-8.jpg" alt="Ecom Image 5">
+        <p>Home Page Product Grid</p>
+      </div>
+      <div class="grid-item">
+        <img src="https://landing.vinovathemes.com/furstore/assets/img/i-9.jpg" alt="Ecom Image 6">
+        <p>Promotional Sliders</p>
+      </div>
+      <div class="grid-item">
+        <img src="https://landing.vinovathemes.com/furstore/assets/img/i-1.jpg" alt="Ecom Image 7">
+        <p>Hero Image and Product SLiders</p>
+      </div>
+      <div class="grid-item">
+        <img src="https://landing.vinovathemes.com/furstore/assets/img/i-2.jpg" alt="Ecom Image 8">
+        <p>Hero Banners & Welcome Pages</p>
+      </div>
+      <div class="grid-item">
+        <img src="https://landing.vinovathemes.com/furstore/assets/img/i-3.jpg" alt="Ecom Image 9">
+        <p>Product Categories</p>
+      </div>
+    </div>
+  <!-- Content Section -->
+ 
+  <div class="styled-div">
+    
+    <h2>What I Do</h2>
+  <div class="service-section">
+      <h3 class="mithai">Custom Website Development</h3>
+      <ul>
+        <li><strong class="joker">Responsive Design:</strong> I create websites that look and perform beautifully on all devices—desktops, tablets, and mobile phones.</li>
+        <li><strong class="joker">User Experience (UX):</strong> Focusing on intuitive navigation and interactive interfaces to enhance user engagement.</li>
+        <li><strong class="joker">Search Engine Optimization (SEO):</strong> Implementing best practices to improve your website's visibility on search engines.</li>
+      </ul>
+    </div>
+  
+    <div class="service-section">
+      <h3 class="mithai">E-Commerce Solutions</h3>
+      <ul>
+        <li><strong class="joker">Online Stores:</strong> Developing secure and scalable e-commerce platforms to help you sell products and services online.</li>
+        <li><strong class="joker">Payment Integration:</strong> Integrating popular payment gateways for smooth and secure transactions.</li>
+        <li><strong class="joker">Inventory Management:</strong> Setting up systems to manage your products, orders, and customer data efficiently.</li>
+      </ul>
+    </div>
+  
+    <div class="service-section">
+      <h3 class="mithai">Content Management Systems (CMS)</h3>
+      <ul>
+        <li><strong class="joker">WordPress Development:</strong> Customizing themes and plugins to suit your specific needs.</li>
+        <li><strong class="joker">Easy Editing:</strong> Enabling you to update your website content without any coding knowledge.</li>
+        <li><strong class="joker">Maintenance & Support:</strong> Offering ongoing support to keep your website updated and secure.</li>
+      </ul>
+    </div>
+  
+    <div class="service-section">
+      
+      <h3 class ="mithai">Web Applications</h3>
+      <ul>
+        <li><strong class="joker">Front-End Development:</strong> Utilizing modern technologies like HTML5, CSS3, JavaScript, and React to build dynamic user interfaces.</li>
+        <li><strong class="joker">Back-End Development:</strong> Using Node.js, PHP, or Python to develop robust server-side applications.</li>
+        <li><strong class="joker">API Integration:</strong> Connecting your website with third-party services to enhance functionality.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="styled-div">
+    <h2 class="mithai">Technologies I Use</h2>
+    <p>
+      <strong class="joker">Front-End:</strong> HTML5, CSS3, JavaScript, React, Angular, Vue.js<br />
+      <hr>
+      <strong class="joker">Back-End:</strong> Node.js, PHP, Python, Ruby on Rails<br />
+      <hr>
+      <strong class="joker">Databases:</strong> MySQL, MongoDB, PostgreSQL<br />
+      <hr>
+      <strong class="joker">Tools & Platforms:</strong> Git, GitHub, AWS, Docker, WordPress, Shopify
+    </p>
+  </div>
+  <div class="styled-div">
+    <h2 class="mithai">My Work Process</h2>
+    <ul>
+      <li><strong class="joker">Consultation:</strong> Understanding your goals, target audience, and project requirements.</li>
+      <li><strong class="joker">Planning:</strong> Creating a roadmap and wireframes to visualize the project structure.</li>
+      <li><strong class="joker">Design:</strong> Developing visual mockups focusing on aesthetics and user experience.</li>
+      <li><strong class="joker">Development:</strong> Building the website with clean, efficient code and the latest technologies.</li>
+      <li><strong class="joker">Testing:</strong> Ensuring the website is bug-free and performs optimally across all devices and browsers.</li>
+      <li><strong class="joker">Launch & Support:</strong> Deploying the website and providing ongoing maintenance and updates.</li>
+    </ul>
+  </div>
+  <div class="styled-div">
+    <h2 class="mithai">Why Choose Me</h2>
+    <ul>
+      <li><strong class="joker">Expertise & Experience:</strong> With over 3 years in the industry, I have successfully delivered projects across various sectors.</li>
+      <li><strong class="joker">Client-Centric Approach:</strong> I prioritize your vision and feedback throughout the development process.</li>
+      <li><strong class="joker">Transparent Communication:</strong> Regular updates and open communication to keep you informed at every stage.</li>
+      <li><strong class="joker">Quality Assurance:</strong> Commitment to delivering high-quality work that meets industry standards.</li>
+    </ul>
+  </div>
+  <div class="styled-div">
+    <h2 class="mithai ">Testimonials</h2>
+    <blockquote>
+      "Working with UDDIT was a fantastic experience. The website exceeded our expectations and has significantly boosted our online presence."
+      <br />— Sarbhajeet, MultiMedia Marketing Agency
+    </blockquote>
+  </div>
+  </div>
+  <div class="portfolio-container flutter-container" style="font-family: Cardo;padding:40px;">
+    <div class="story">
+    <div class="pink-div">
+      <img src="medventure.jpg" alt="Image 1">
+      <a href="https://play.google.com/store/apps/details?id=com.medventure.user&pcampaignid=web_share" target="_blank">Click Here</a>
+    </div>
+    
+    <!-- Second Div -->
+    <div class="pink-div">
+      <img src="zydusready.jpg" alt="Image 2">
+      <a href="https://play.google.com/store/apps/details?id=com.zydus.verify&pcampaignid=web_share" target="_blank">Click Here</a>
+    </div>
+    
+    <!-- Third Div -->
+    <div class="pink-div">
+      <img src="nextbillo.jpg" alt="Image 3">
+      <a href="https://play.google.com/store/apps/details?id=com.nextillo&pcampaignid=web_share" target="_blank">Click Here</a>
+    </div>
+    
+    <!-- Fourth Div -->
+    <div class="pink-div">
+      <img src="bliss.jpg" alt="Image 4">
+      <a href="https://play.google.com/store/apps/details?id=com.cyberland.kidibliss_parent&pcampaignid=web_share" target="_blank">Click Here</a>
+    </div>
+    </div>
+    <div class="medventure">
+      <!-- Eight Image Divs -->
+       <h2>MEDVENTURE</h2><br><hr>
+      <div class="image-div">
+        <img src="https://play-lh.googleusercontent.com/KV9L6asK_U6wsHMRbu2JMjYzLYClndpTmIHhAjaKVIGH6Vu34qcTI1g_dDryDg5rsIM=w526-h296-rw" alt="Image 1">
+      </div>
+      
+      <div class="image-div">
+        <img src="https://play-lh.googleusercontent.com/4K1__79z09mKIVQtSWTgafuImi8T7IdStiP_SL7TTZ9ukSpAN2o1YCeCm2dD7pPUemI=w526-h296-rw" alt="Image 2">
+      </div>
+      
+      <div class="image-div">
+        <img src="https://play-lh.googleusercontent.com/lRaVfabALmyAsbgsH-yGYAoX3HxRF618azaEcsRjwxNjJ2SUw7R5iZJNoZp-Wc-652k=w526-h296-rw" alt="Image 3">
+      </div>
+      
+      <div class="image-div">
+        <img src="https://play-lh.googleusercontent.com/vATNWKRd85JAL-DWUYTmbMTVd9P-tvI7M4KgCF3hOywC895zTd8YtsgP9Ewf9cGq1E0=w526-h296-rw" alt="Image 4">
+      </div>
+      
+      <div class="image-div">
+        <img src="https://play-lh.googleusercontent.com/GScE28QiYxZpgrUAFO0HZZz-SkbyewYh9Pdd2ACIL87L_Tp9nkbivYyadJPLPB-2lKQ=w526-h296-rw" alt="Image 5">
+      </div>
+      
+      <div class="image-div">
+        <img src="https://play-lh.googleusercontent.com/wV5b8k4RtE3pReKH1HNIT4ihZOh0QVPqptkbG3ptje1VhtyuaSg8T0FL8H3zddV5xr4=w526-h296-rw" alt="Image 6">
+      </div>
+      
+      <div class="image-div">
+        <img src="https://play-lh.googleusercontent.com/lWGZ2tAHviC4ksZLcgNtVzyiMiXf5uzxYLGtTrb11yNkag0Uajh_WuHJ69_GuMAVPRV0=w526-h296-rw" alt="Image 7">
+      </div>
+      
+      <div class="image-div">
+        <img src="https://play-lh.googleusercontent.com/tum2CDJMVZTlaI8FKISfQcP_TnuKznFdLVsMYTVgq9CBp7inKjR5puYhF8ssZlC7hIU=w526-h296-rw" alt="Image 8">
+      </div>
+    </div>
+    <hr>
+   
+  
+
+<div class="lively">
+  <!-- Ten Image Divs -->
+   <h2>NEXTILLO</h2><hr>
+  <div class="career-div">
+    <img src="https://play-lh.googleusercontent.com/SoT6IGL0aW9rmpeYcIF_l2Yyojj3Esrm-U_vI1F7KPXhYwmTQAdjIfRbC-YZD2j9j98=w526-h296-rw" alt="Image 1">
+  </div>
+  
+  <div class="career-div">
+    <img src="https://play-lh.googleusercontent.com/SoT6IGL0aW9rmpeYcIF_l2Yyojj3Esrm-U_vI1F7KPXhYwmTQAdjIfRbC-YZD2j9j98=w526-h296-rw" alt="Image 2">
+  </div>
+  
+  <div class="career-div">
+    <img src="https://play-lh.googleusercontent.com/SoT6IGL0aW9rmpeYcIF_l2Yyojj3Esrm-U_vI1F7KPXhYwmTQAdjIfRbC-YZD2j9j98=w526-h296-rw" alt="Image 3">
+  </div>
+  
+  <div class="career-div">
+    <img src="https://play-lh.googleusercontent.com/rC1LDqR8MUZz4fsW7ROo7RSx2bCRIIUfyIZuUpJPMmgA4MAEhXT42UKEASn7298Cqz8=w526-h296-rw" alt="Image 4">
+  </div>
+  
+  <div class="career-div">
+    <img src="https://play-lh.googleusercontent.com/SGd9RLy4W6-iagk2Ux7BK7roTx_DKNCehWtw9sS_3FD9LrJPQT3PXzqFbT1ItPgt3u4=w526-h296-rw" alt="Image 5">
+  </div>
+  
+  <div class="career-div">
+    <img src="https://play-lh.googleusercontent.com/FsUtdIoYHrdjt5n8v87wDJxwQxi74caDiKCnaQgtsagwyCj1ducj62ItHRRGJ7vG1xo=w526-h296-rw" alt="Image 6">
+  </div>
+  
+  <div class="career-div">
+    <img src="https://play-lh.googleusercontent.com/f5ioOeQ0EKHMfBWcZCCeTYWXU0eoS3Qia0BI7CE_gneVomnhdnFguXGc8pO_d425HnM=w526-h296-rw" alt="Image 7">
+  </div>
+  
+  <div class="career-div">
+    <img src="https://play-lh.googleusercontent.com/tvC7v5UFfcCX6XP0cXkENMQ7coSsUvjFBzV-BsHllxPhGpe7F2reuPPWcgMys0kBVQ=w526-h296-rw" alt="Image 8">
+  </div>
+  
+  <div class="career-div">
+    <img src="https://play-lh.googleusercontent.com/9VPDKpB-mi4g4TYKmGfXaW25ebqD2PEc1birYaw94bZIbjxw7VvIcWqSiNgTb6AZ1Q=w526-h296-rw" alt="Image 9">
+  </div>
+  
+  <div class="career-div">
+    <img src="https://play-lh.googleusercontent.com/RWQrVl57vyqUrVI-uNxXpsYqyeQN1prENF5SeiwTwZlfIBl-Sv5wUVvdCIUD63bQTNgu=w526-h296-rw" alt="Image 10">
+  </div>
+</div>
+<hr>
+<div class="chief-div">
+  <h2>ZYDUS-READY</h2><hr>
+  <div class="zydus">
+    <img src="https://play-lh.googleusercontent.com/v718Llq7DYDtkS5SafJvF3Jzlc1IoIb1R9uPNAXH0pJMAS7ojmBL908pFQ12U_c1yQc=w526-h296-rw" alt="Image 1">
+    <a href="https://example.com" target="_blank">Click Here</a>
+  </div>
+  
+  <div class="zydus">
+    <img src="https://play-lh.googleusercontent.com/aDOU9fpugw_18l6m5dZ8owLlErxxHP3ZGl-NVC5Xmppx0sqV6Is4Ic0YKLQD2WF_EFg5=w526-h296-rw" alt="Image 2">
+    <a href="https://example.com" target="_blank">Click Here</a>
+  </div>
+  
+  <div class="zydus">
+    <img src="https://play-lh.googleusercontent.com/tGSVnBToir6s2wcWzN1VfNgXI6RF40lgqsp77-pTne4w7O3b0nf1_4uCaKZqf2mLlbc=w526-h296-rw" alt="Image 3">
+    <a href="https://example.com" target="_blank">Click Here</a>
+  </div>
+  
+  <div class="zydus">
+    <img src="https://play-lh.googleusercontent.com/lFEy5JeaTYOFn2E4XA3pvcYwPrEavcLGaj5O0TKSv4YYjsjR2uk7aCiO3sk2z8KcnA=w526-h296-rw" alt="Image 4">
+    <a href="https://example.com" target="_blank">Click Here</a>
+  </div>
+
+  <div class="zydus">
+    <img src="https://play-lh.googleusercontent.com/TCw64BLreodkAWmDzVhrLcohjqq_Ht374oInVigE-V6XEYB5CRf93BOH_MmCjG4UCMk=w526-h296-rw" alt="Image 5">
+    <a href="https://example.com" target="_blank">Click Here</a>
+  </div>
+
+  <div class="zydus">
+    <img src="https://play-lh.googleusercontent.com/TCw64BLreodkAWmDzVhrLcohjqq_Ht374oInVigE-V6XEYB5CRf93BOH_MmCjG4UCMk=w526-h296-rw" alt="Image 6">
+    <a href="https://example.com" target="_blank">Click Here</a>
+  </div>
+
+  <div class="zydus">
+    <img src="https://play-lh.googleusercontent.com/sGNLnmJfArE5jrxjidz2Odgtct-bIFBOvbPcGKhnmxK52DImuR-SWwkbHH8WbGN_nQ=w526-h296-rw" alt="Image 7">
+    <a href="https://example.com" target="_blank">Click Here</a>
+  </div>
+
+  <div class="zydus">
+    <img src="https://play-lh.googleusercontent.com/SuvmntiSMJnGAYmiFBIVL6sWrTxWpq8YaS0Om1_GujXB3RjgAOLWGbVjKWI6kWAtOw=w526-h296-rw" alt="Image 8">
+    <a href="https://example.com" target="_blank">Click Here</a>
+  </div>
+</div>
+<hr>
+<div class="maya">
+  <h2>KID-BLISS</h2><hr>
+  <div class="small-img">
+    <img src="https://blank.com" alt="OK">
+    <a href="https://full.com">print</a>
+  </div>
+  <div class="small-img">
+    <img src="https://blank.com" alt="OK">
+    <a href="https://full.com">print</a>
+  </div>
+  <div class="small-img">
+    <img src="https://blank.com" alt="OK">
+    <a href="https://full.com">print</a>
+  </div>
+  <div class="small-img">
+    <img src="https://blank.com" alt="OK">
+    <a href="https://full.com">print</a>
+  </div>
+  <div class="small-img">
+    <img src="https://blank.com" alt="OK">
+    <a href="https://full.com">print</a>
+  </div>
+  <div class="small-img">
+    <img src="https://blank.com" alt="OK">
+    <a href="https://full.com">print</a>
+  </div>
+</div>
+    <div class="flutter-header">
+      <h2 style="color:white;background-color:#060617;max-width:fit-content">Flutter</h2>
+      <p>Specializing in cross-platform mobile development with Flutter, delivering smooth, high-performance, and visually appealing applications.</p>
+    </div>
+  
+    <div class="skills-section">
+      <h3>Core Skills</h3>
+      <ul>
+        <li><strong>Dart Programming:</strong> Proficient in Dart, Flutter's core language, focusing on clean, efficient code to build scalable and maintainable applications.</li>
+        <li><strong>State Management:</strong> Experienced with various state management techniques in Flutter, including Provider, Riverpod, Bloc, and Redux, to efficiently manage app states.</li>
+        <li><strong>Flutter Widgets:</strong> In-depth knowledge of both Stateless and Stateful widgets, along with custom widget creation for reusable components.</li>
+        <li><strong>UI/UX Design:</strong> Expertise in Flutter’s flexible UI system to create visually appealing and responsive interfaces across different screen sizes and platforms.</li>
+        <li><strong>Animations and Transitions:</strong> Skilled in using Flutter’s animation libraries to add smooth transitions, custom animations, and visual effects that enhance user experience.</li>
+      </ul>
+    </div>
+  
+    <div class="tools-section">
+      <h3>Development Tools and Frameworks</h3>
+      <ul>
+        <li><strong>Firebase Integration:</strong> Integrated Firebase services (Firestore, Authentication, Cloud Messaging) for real-time data syncing, user authentication, and push notifications.</li>
+        <li><strong>API Integration:</strong> Proficient in RESTful API integration using packages like Dio and HTTP, as well as GraphQL for complex data fetching requirements.</li>
+        <li><strong>Testing and Debugging:</strong> Knowledge of Flutter testing frameworks, including unit testing, widget testing, and integration testing, for high-quality and bug-free applications.</li>
+        <li><strong>CI/CD with GitHub Actions:</strong> Experience in setting up continuous integration and deployment (CI/CD) pipelines for Flutter projects using GitHub Actions and other CI tools.</li>
+        <li><strong>Version Control (Git):</strong> Proficient in Git for version control, using platforms like GitHub and GitLab for code collaboration and repository management.</li>
+      </ul>
+    </div>
+  
+    <div class="projects-section">
+      <h3>Highlighted Projects</h3>
+      <ul>
+        <li><strong>E-Commerce App:</strong> Developed a cross-platform e-commerce app with Flutter, featuring product catalog, search, cart, and payment integration. Integrated Firebase for backend services.</li>
+        <li><strong>Social Media App:</strong> Built a social networking app with real-time chat, multimedia sharing, and notifications. Implemented Firebase Authentication and Firestore for user data and chat functionality.</li>
+        <li><strong>Healthcare Tracking App:</strong> Created a health tracking app for monitoring vitals and appointments. Included custom notifications, data visualization with charts, and integration with wearable device APIs.</li>
+        <li><strong>Travel Booking App:</strong> Designed and developed a travel app with real-time booking options, location-based recommendations, and a user review system. Used Google Maps API for location services.</li>
+      </ul>
+    </div>
+  
+    <div class="learning-section">
+      <h3>Continuous Learning</h3>
+      <ul>
+        <li><strong>Advanced Flutter Courses:</strong> Completed advanced Flutter and Dart courses to stay updated with the latest best practices and features.</li>
+        <li><strong>Flutter Web and Desktop:</strong> Currently exploring Flutter’s capabilities for web and desktop applications, expanding skills beyond mobile development.</li>
+        <li><strong>Design Patterns and Architecture:</strong> Learning advanced design patterns (e.g., MVVM, Clean Architecture) for scalable, maintainable code structures in Flutter apps.</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="bottom-slider" id="bottom-slider">
+    <h2>Discover My Projects</h2>
+    <p>This is the slider section located before the footer.</p>
+    <h1>Robotics Algorithms</h1>
+
+    <div class="container">
+        <!-- Buttons for algorithms -->
+        <button class="algo-button" onclick="showAlgo('q-learning')">Electro-Global</button>
+        <button class="algo-button" onclick="showAlgo('dqn')">(DQN)</button>
+        <button class="algo-button" onclick="showAlgo('ppo')">(PPO)</button>
+        <button class="algo-button" onclick="showAlgo('ddpg')">(DDPG)</button>
+        <button class="algo-button" onclick="showAlgo('slam')">(SLAM)</button>
+        <button class="algo-button" onclick="showAlgo('rrt')">(RRT)</button>
+        <button class="algo-button" onclick="showAlgo('genetic')">Genetics Inc. Company</button>
+    </div>
+
+    <!-- Algorithm Information Blocks -->
+    <div id="q-learning" class="algo-block">
+        <h2 class="algo-title">Q-Learning</h2>
+        <p class="algo-description">Q-Learning is a model-free reinforcement learning algorithm to learn the value of actions in a state-action space.</p>
+        <div class="algo-code">
+            <code style="text-align: justify;">
+              "Uddit’s expertise in full-stack development truly brought our vision to life.
+               He took the time to understand our business needs and translated them into a website that not only looks stunning but performs flawlessly. 
+               The responsive design has significantly boosted our user engagement, and we've seen a noticeable increase in our website traffic. 
+               His ability to seamlessly blend aesthetics with functionality is unmatched. Highly recommended for anyone looking to build a robust online presence." 
+              — Rahul, CEO of TechInnovate Solutions
+            </code>
+        </div>
+    </div>
+
+    <div id="dqn" class="algo-block">
+      <h2 class="algo-title">(DQN)</h2>
+      <p class="algo-description">DQN combines Q-Learning with deep learning by using a neural network to approximate the Q-values for reinforcement learning problems.</p>
+      <div class="algo-code">
+          <code  style="text-align: justify;">
+            "Uddit was instrumental in transforming our outdated website into a modern, high-performing digital platform. 
+            From the initial consultation to the final deployment, he was attentive, responsive, and proactive in addressing our needs.
+             He implemented a range of advanced features, including real-time analytics integration and seamless API connections, which have enhanced our operational efficiency.
+            The website's sleek design and intuitive navigation have received positive feedback from both our team and customers.
+            Uddit’s dedication and expertise have made a significant impact on our online strategy." 
+            — Neha, Operations Manager at BlueSky Ventures
+          </code>
+      </div>
+  </div>
+
+
+
+    <div id="ppo" class="algo-block">
+        <h2 class="algo-title">(PPO)</h2>
+        <p class="algo-description">PPO is a policy gradient method that provides a balance between sample efficiency and ease of implementation for reinforcement learning tasks.</p>
+        <div class="algo-code">
+            <code  style="text-align: justify;">
+              "Uddit's creativity and problem-solving skills far exceeded our expectations.
+               He developed a robust e-commerce platform tailored to our specific needs, making it easy for us to manage inventory, process payments, and update content effortlessly.
+                His user-friendly interface has simplified the buying experience for our customers, leading to a noticeable increase in sales. 
+                Uddit's proactive support during and after the project ensured everything ran smoothly, and his suggestions for ongoing improvements were invaluable."
+               — Sneha, Owner of Fashionista Boutique
+            </code>
+        </div>
+    </div>
+
+    <div id="ddpg" class="algo-block">
+        <h2 class="algo-title">(DDPG)</h2>
+        <p class="algo-description">DDPG is an actor-critic method used for continuous action spaces, employing deterministic policies and Q-learning.</p>
+        <div class="algo-code">
+            <code  style="text-align: justify;">
+              "Working with Uddit was a breeze! 
+              He has a knack for breaking down complex requirements and turning them into intuitive and user-friendly features. 
+              Throughout the development process, he communicated clearly, kept us informed of progress, and delivered everything on schedule.
+               His expertise in both front-end and back-end technologies made our project a seamless experience, and the final product exceeded our expectations. 
+               We’re thrilled with the results and look forward to future collaborations." 
+              — Meera, Product Manager at DigiWave Inc.
+            </code>
+        </div>
+    </div>
+
+    <div id="slam" class="algo-block">
+        <h2 class="algo-title">(SLAM)</h2>
+        <p class="algo-description">SLAM is the process by which a robot constructs a map of an unknown environment while simultaneously keeping track of its location.</p>
+        <div class="algo-code">
+            <code  style="text-align: justify;">
+              "Uddit’s professionalism and deep understanding of web technologies are truly commendable.
+               He not only delivered the project ahead of schedule but also ensured every detail was polished to perfection. 
+               His proactive approach to problem-solving, combined with his technical skills, resulted in a website that’s visually appealing and highly functional. 
+               The custom solutions he provided have streamlined our internal processes, saving us time and resources.
+              He is, without a doubt, an asset to any team looking for a skilled developer." 
+              — Kavita, Founder of EcomExpress
+            </code>
+        </div>
+    </div>
+
+    <div id="rrt" class="algo-block">
+        <h2 class="algo-title">(RRT)</h2>
+        <p class="algo-description">RRT is a path planning algorithm designed for efficiently navigating robots through high-dimensional spaces.</p>
+        <div class="algo-code">
+            <code  style="text-align: justify;">
+              "From start to finish, Uddit demonstrated exceptional communication, technical skills, and dedication.
+              He took the time to understand our goals and provided valuable input to refine our initial ideas.
+              The final website he delivered has significantly improved our user engagement, conversion rates, and overall online presence. 
+              Uddit’s attention to detail and willingness to go the extra mile make him a standout developer in his field. 
+              Our team couldn’t be happier with the results!"
+              — Arjun, Marketing Director at CloudWorks
+            </code>
+        </div>
+    </div>
+
+    <div id="genetic" class="algo-block">
+        <h2 class="algo-title">Genetic Algorithm</h2>
+        <p class="algo-description">Genetic algorithms simulate the process of natural selection to generate solutions to optimization and search problems.</p>
+        <div class="algo-code">
+            <code  style="text-align: justify;">
+                # Genetic Algorithm Pseudocode
+                initialize population with random solutions
+                for each generation:
+                    evaluate fitness of population
+                    select parents based on fitness
+                    crossover parents to create new offspring
+                    mutate offspring randomly
+                    replace the least fit solutions with new offspring
+            </code>
+        </div>
+    </div>
+    </div>
+  <footer style="background: linear-gradient(115deg, rgba(0,0,0,0.8) 0%, rgba(17,17,66,0.8) 25%, rgba(0,51,153,0.7) 50%, rgba(0,204,255,0.5) 75%, rgba(0,0,0,0.8) 100%);" >
+    <div class="footer-container">
+      <div class="footer-left">
+        <h3>
+          EXTRANOS 
+          <span class="circular-image-container">
+            <img src="uddit.jpeg" alt="Logo" class="circular-image">
+          </span>
+        </h3>
+        <br>
+        <p class="footer-links mithai">
+          <a href="#">Home</a> |
+          <a href="#">About</a> |
+          <a href="#">Services</a> |
+          <a href="#">Contact</a>
+        </p>
+        <p class="footer-company-name">© 2024 UDDIT, Full Stack Web Developer</p>
+      </div>
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker-alt"></i>
+          <p class="high"><span>MNIT Jaipur, JLN Marg, Jaipur</span> 302017, Rajasthan</p>
+        </div>
+        <div>
+          <i class="fa fa-phone-alt"></i>
+          <p class="high">Phone: +91-7456886877</p>
+          <p class="high">WhatsApp: +91-9672538062</p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p class="mithai"><a href="mailto:udditalerts247@gmail.com">udditalerts247@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>LET ME HELP YOU WITH A WEBSITE/APP</span><br>
+          Flutter, Firebase, Flutter, AWS, Docker, MERN, Python, Flask
+        </p>
+        <div class="footer-icons">
+          <a href="https://www.udditportfolio.online"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/UdditRise"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/uddit-7258792ab/"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/UDDITwork"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+   
+  </footer>
+
+  <!-- JavaScript for Typing Animation -->
+  <script>
+    // Stop the blinking cursor after typing effect
+    setTimeout(() => {
+      const lastLine = document.querySelector('.last-line');
+      lastLine.classList.add('no-blink');
+    }, 3000); // Adjust timing to match typing speed
+   
+
+  function scrollToSlider() {
+    const slider = document.getElementById('bottom-slider');
+    slider.style.display = 'block'; // Make the slider visible
+    slider.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the slider section
+  }
+
+  function showAlgo(algoId) {
+            // Hide all blocks
+            document.querySelectorAll('.algo-block').forEach(block => {
+                block.style.display = 'none';
+            });
+
+            // Show the selected block
+            document.getElementById(algoId).style.display = 'block';
+        }
+  
+
+
+// Ensure the slider resets correctly on window resize
+window.addEventListener('resize', () => {
+  const slider = document.getElementById('internshipSlider');
+  const slideWidth = document.querySelector('.internship-item').offsetWidth;
+  slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+});
+
+
+  // Scrolling and Slider Functionality
+  function scrollToSlider() {
+      const slider = document.getElementById('bottom-slider');
+      slider.style.display = 'block';
+      slider.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Toggle Flip and Info Card Display
+    function toggleFlip(div) {
+      const cardInner = div.querySelector('.flip-card-uddit');
+      const toggleButton = div.querySelector('.toggle-button');
+
+      cardInner.classList.toggle('flipped');
+      toggleButton.textContent = cardInner.classList.contains('flipped') ? 'X' : '+';
+    }
+
+    function showInfo(event) {
+      event.stopPropagation();
+      const infoCard = document.getElementById("infoCard");
+      infoCard.classList.add('active');
+      document.addEventListener('click', hideInfo);
+    }
+
+    function hideInfo(event) {
+      const infoCard = document.getElementById("infoCard");
+      if (event.target !== infoCard && !infoCard.contains(event.target)) {
+        infoCard.classList.remove('active');
+        document.removeEventListener('click', hideInfo);
+      }
+    }
+
+    // Internship Slider Controls
+    let currentSlide = 0;
+
+    function moveInternshipSlide(direction) {
+      const slider = document.getElementById('internshipSlider');
+      const items = document.querySelectorAll('.internship-item');
+      const totalSlides = items.length;
+
+      currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+      const slideWidth = items[0].offsetWidth;
+
+      slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+    }
+
+    window.addEventListener('resize', () => {
+      const slider = document.getElementById('internshipSlider');
+      const slideWidth = document.querySelector('.internship-item').offsetWidth;
+      slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+    });
+    function toggleFlip(div) {
+    const cardInner = div.querySelector('.flip-card-uddit');
+    const toggleButton = div.querySelector('.plus-button');
+
+    cardInner.classList.toggle('flipped');
+    toggleButton.textContent = cardInner.classList.contains('flipped') ? 'X' : '+';
+  }
+
+  function showInfo(event) {
+    event.stopPropagation();
+    const infoCard = document.getElementById("infoCard");
+    infoCard.classList.add('active');
+    document.addEventListener('click', hideInfo);
+  }
+
+  function hideInfo(event) {
+    const infoCard = document.getElementById("infoCard");
+    if (event.target !== infoCard && !infoCard.contains(event.target)) {
+      infoCard.classList.remove('active');
+      document.removeEventListener('click', hideInfo);
+    }
+  }
+   // Content for each skill category
+   const skillContent = {
+      "website-development": `
+        <li><strong>Frontend Development</strong><br>
+  HTML, CSS, JavaScript, React, and Angular for creating visually appealing and interactive websites.<br><br>
+  <strong>HTML (Hypertext Markup Language):</strong> The backbone of web pages, structuring content in a way that browsers can interpret. It provides elements like headers, paragraphs, images, and links to define the structure of a webpage.<br><br>
+  <strong>CSS (Cascading Style Sheets):</strong> CSS is used to style HTML elements, allowing for aesthetic customization such as colors, layouts, and fonts. Advanced techniques include animations, media queries for responsiveness, and CSS Grid/Flexbox for layout control.<br><br>
+  <strong>JavaScript:</strong> The primary language for interactivity on the web. JavaScript adds dynamic functionality like image sliders, form validation, and asynchronous data fetching. Frameworks and libraries like React, Angular, and Vue.js make it easier to build complex, component-based user interfaces.<br><br>
+  <strong>React:</strong> A JavaScript library developed by Facebook for building user interfaces, especially single-page applications. It allows developers to build reusable components and manage the application state efficiently.<br><br>
+  <strong>Angular:</strong> A robust frontend framework developed by Google, Angular is ideal for building large-scale applications, providing a complete solution with dependency injection, routing, and forms handling.<br>
+</li>
+
+<li><strong>Backend Development</strong><br>
+  Node.js, Django, PHP for handling server-side operations, API integration, and database management.<br><br>
+  <strong>Node.js:</strong> A runtime environment that allows JavaScript to be used on the server-side, enabling developers to build fast, scalable backend applications. It’s particularly suited for real-time applications like chat apps and collaborative tools.<br><br>
+  <strong>Django:</strong> A high-level Python framework that promotes rapid development and clean, pragmatic design. Django is great for creating complex database-driven websites as it provides an ORM (Object-Relational Mapper) and an admin panel out of the box.<br><br>
+  <strong>PHP:</strong> A popular scripting language that powers many websites and web applications. PHP is often used with MySQL databases and is particularly common in content management systems (like WordPress) and e-commerce platforms.<br><br>
+  <strong>API Integration:</strong> APIs allow the backend to communicate with the frontend, external services, or other software. RESTful and GraphQL APIs are common for enabling data exchange, supporting functionality like user authentication, data retrieval, and third-party service integration.<br>
+</li>
+
+<li><strong>Deployment</strong><br>
+  Knowledge of cloud platforms like AWS, Azure, and continuous deployment tools.<br><br>
+  <strong>AWS (Amazon Web Services):</strong> AWS provides a range of cloud services, including virtual servers (EC2), storage (S3), databases (RDS), and container services (ECS/EKS). Knowledge of AWS allows developers to deploy scalable, secure, and resilient applications.<br><br>
+  <strong>Azure:</strong> Microsoft's cloud platform, offering similar services as AWS, including virtual machines, app hosting, databases, and DevOps tools. It integrates well with .NET applications and offers strong enterprise solutions.<br><br>
+  <strong>Continuous Integration and Continuous Deployment (CI/CD):</strong> Tools like Jenkins, GitHub Actions, and GitLab CI/CD automate the process of testing and deploying code. CI/CD enables regular updates to be deployed seamlessly, reducing downtime and improving software reliability.<br><br>
+  <strong>Docker and Containerization:</strong> Docker allows applications to be packaged with all necessary dependencies, ensuring consistency across different environments (development, staging, production). It also facilitates microservices architecture and easy deployment.<br>
+</li>
+
+      `,
+      "ui-ux": `
+        <li><strong>User Interface (UI) Design</strong><br>
+  Expertise in layout, color theory, typography, and designing responsive interfaces.<br><br>
+  <strong>Layout:</strong> Mastery in arranging visual elements on a page to create an organized, functional, and visually appealing design. Effective layout design balances text, images, buttons, and other interactive elements, guiding the user’s attention to essential parts of the interface.<br><br>
+  <strong>Color Theory:</strong> Understanding the psychological impact of colors and how to use them to convey moods and highlight important information. Expertise in color harmonies, contrast ratios, and color accessibility to ensure that the interface is both visually appealing and usable for color-blind users.<br><br>
+  <strong>Typography:</strong> Knowledge of font types, sizes, spacing, and hierarchy to improve readability and visual hierarchy. Choosing appropriate fonts and styling helps set the tone of the application, ensuring that the text is easy to read and complements the brand's identity.<br><br>
+  <strong>Responsive Design:</strong> Designing interfaces that adapt to various screen sizes and orientations (desktop, tablet, mobile) while maintaining usability and aesthetic consistency. Familiarity with flexible grids, media queries, and mobile-first design approaches to deliver seamless experiences across devices.<br>
+</li>
+
+<li><strong>User Experience (UX) Design</strong><br>
+  Proficiency in creating seamless user journeys with Figma, Adobe XD, and Sketch.<br><br>
+  <strong>User Research:</strong> Conducting interviews, surveys, and usability testing to understand users’ needs, behaviors, and pain points. This insight informs design decisions that address real user issues and improve the overall experience.<br><br>
+  <strong>User Journey Mapping:</strong> Visualizing the steps a user takes to accomplish tasks on a website or app. User journey mapping helps identify potential roadblocks, optimize workflows, and create a smooth, intuitive experience from start to finish.<br><br>
+  <strong>Wireframing:</strong> Creating low-fidelity sketches or digital blueprints to outline the basic structure and layout of a page. Wireframes focus on content placement and user flow without distracting elements, allowing stakeholders to review and provide feedback early in the design process.<br><br>
+  <strong>Prototyping Tools:</strong> Proficiency with industry-standard tools like Figma, Adobe XD, and Sketch for designing interactive prototypes. These tools allow designers to simulate real user interactions, test various functionalities, and make iterative changes quickly before development begins.<br>
+</li>
+
+<li><strong>Prototyping</strong><br>
+  Rapid prototyping using tools like InVision and Figma to visualize concepts.<br><br>
+  <strong>InVision:</strong> InVision is a digital product design platform that enables designers to create clickable prototypes and gather real-time feedback from stakeholders. It supports collaborative workflows, making it easy to communicate ideas and test user flows before moving to high-fidelity design.<br><br>
+  <strong>Figma:</strong> A cloud-based design tool that enables collaborative prototyping, where multiple team members can work on a design simultaneously. Figma’s prototyping capabilities allow designers to create interactive and animated transitions, mimicking the final product experience. Figma also offers version control and commenting features, facilitating team feedback.<br><br>
+  <strong>Rapid Prototyping Techniques:</strong> Using low-fidelity and high-fidelity prototypes to test ideas quickly and iterate on designs based on feedback. Low-fidelity prototypes (like sketches or wireframes) help communicate the concept, while high-fidelity prototypes simulate the actual product experience.<br><br>
+  <strong>User Testing:</strong> Using prototypes to conduct usability testing and gather user feedback early in the design process. Testing with prototypes helps identify potential issues and areas for improvement, allowing for a more user-centered design.<br>
+</li>
+
+      `,
+      "ai-ml": `
+        <li><strong>Machine Learning</strong><br>
+  Experience with supervised and unsupervised algorithms using Python libraries such as Scikit-Learn and TensorFlow.<br><br>
+  <strong>Supervised Learning:</strong> Expertise in algorithms like Linear Regression, Decision Trees, Support Vector Machines, and Neural Networks for predictive modeling. Skilled in training models with labeled data to perform tasks like classification, regression, and recommendation systems.<br><br>
+  <strong>Unsupervised Learning:</strong> Proficient in clustering (e.g., K-Means, DBSCAN) and dimensionality reduction techniques (e.g., PCA, t-SNE) to uncover hidden patterns and groupings in data without predefined labels. These methods are crucial for tasks like customer segmentation and anomaly detection.<br><br>
+  <strong>Python Libraries:</strong> Extensive experience with Scikit-Learn for implementing machine learning models, including feature selection, model evaluation, and cross-validation. Skilled in using TensorFlow and Keras for deep learning applications, such as image and text classification, where neural networks are applied.<br><br>
+  <strong>Model Evaluation and Tuning:</strong> Proficient in techniques like cross-validation, hyperparameter tuning, and performance metrics (e.g., accuracy, precision, recall, F1-score) to optimize model performance. Experienced in applying Grid Search, Random Search, and advanced methods to find the best model configurations.<br>
+</li>
+
+<li><strong>Data Processing</strong><br>
+  Data cleaning, transformation, and visualization with Pandas and Matplotlib.<br><br>
+  <strong>Data Cleaning:</strong> Skilled in handling missing values, removing duplicates, and correcting data inconsistencies to ensure data integrity. Proficiency in using Pandas for filtering, sorting, and imputing missing values, which is crucial for reliable machine learning model training.<br><br>
+  <strong>Data Transformation:</strong> Expertise in feature engineering techniques, such as encoding categorical variables, scaling numerical features, and deriving new variables to enhance predictive power. Proficient in using Pandas to reshape and aggregate data, creating a format that is easier to analyze or model.<br><br>
+  <strong>Data Visualization:</strong> Skilled in Matplotlib and Seaborn for creating insightful data visualizations, including histograms, scatter plots, heatmaps, and box plots. Visualization is key for exploratory data analysis, allowing quick identification of patterns, correlations, and outliers in data.<br><br>
+  <strong>Data Pipelines:</strong> Experience in building automated data pipelines for seamless data flow from raw input to processed output. Knowledge of ETL (Extract, Transform, Load) processes, which ensures efficient data handling in machine learning workflows.<br>
+</li>
+
+<li><strong>AI Integration</strong><br>
+  Integrating AI solutions into web applications for real-time predictions and recommendations.<br><br>
+  <strong>Real-Time Predictions:</strong> Skilled in deploying machine learning models in real-time environments to deliver immediate insights and responses. Experience with Flask and FastAPI for wrapping models in APIs, enabling real-time predictions for applications like chatbots, recommendation engines, and dynamic content personalization.<br><br>
+  <strong>Recommendations:</strong> Expertise in collaborative filtering, content-based filtering, and hybrid recommendation systems to deliver personalized content, products, or services. Integrated recommendation engines into e-commerce and content platforms, enhancing user engagement and conversion rates.<br><br>
+  <strong>Cloud Deployment:</strong> Experience with deploying AI models on cloud platforms like AWS, Google Cloud, and Azure, utilizing services such as AWS SageMaker and Google AI Platform. Cloud deployment allows models to scale as needed, accommodating high traffic and complex computations.<br><br>
+  <strong>Model Monitoring and Retraining:</strong> Implemented monitoring for deployed models to track performance and accuracy over time. Knowledge of model retraining workflows, where models are periodically updated with new data to maintain relevance and accuracy in dynamic environments.<br>
+</li>
+
+      `,
+      "app-development": `
+         <li><strong class="styled-heading">Programming Languages (Java, Swift, Kotlin, JavaScript, Python, etc.)</strong><br><p class="red-background-text">Java/Kotlin (Android Development):</p><hr> Deep knowledge of Java and Kotlin is essential for Android development, as these languages enable smooth integration with Android’s native libraries and APIs, allowing developers to create efficient, user-friendly apps.<br>
+        <p class="red-background-text">Swift (iOS Development):</p><hr> Mastery of Swift is crucial for building iOS applications that are fast, safe, and memory efficient, supporting advanced Apple features and functionalities like ARKit and CoreML.<br>
+        <p class="red-background-text">JavaScript (React Native, Ionic):</p><hr> JavaScript enables cross-platform development through frameworks like React Native and Ionic, allowing for efficient mobile apps with a single codebase that works on both iOS and Android.<br></li>
+      <li><strong class="styled-heading"> Cross-Platform Development</strong><br><p class="red-background-text">React Native:</p><hr> Proficiency with React Native is valuable for building cross-platform applications, allowing code reusability across Android and iOS, which accelerates development and reduces maintenance overhead.<br>
+        <p class="red-background-text">Flutter:</p><hr> Knowledge of Google’s Flutter framework is essential for creating visually appealing, performant apps using a single codebase, ideal for rapid prototyping and building applications for multiple platforms simultaneously.<br></li>
+      <li><strong class="styled-heading">UI/UX Design Principles</strong><br><p class="red-background-text">User Interface (UI) Design:</p><hr> Understanding layout, color theory, typography, and responsiveness is key to building visually pleasing, accessible apps.<br> Familiarity with UI design tools like Sketch, Figma, and Adobe XD can help in quickly creating intuitive, prototype user interfaces.<br>
+        <p class="red-background-text">User Experience (UX):</p><hr> Knowledge of usability testing, user research, and interaction design principles allows developers to build intuitive, smooth, and engaging user experiences tailored to target audiences.<br></li>
+      <!-- Add additional points as needed -->
+      <li><strong class="styled-heading">APIs and Backend Integration</strong><br><p class="red-background-text">RESTful APIs:</p><hr> Understanding RESTful API principles allows for seamless interaction between mobile applications and backend services, facilitating the efficient exchange of data and functions.<br>
+        <p class="red-background-text">GraphQL:</p><hr> Skills in GraphQL, an alternative API approach, allow for fetching exactly the data needed, optimizing performance and flexibility for complex queries and data-heavy applications.<br>
+        <p class="red-background-text">Firebase:</p><hr> Familiarity with Firebase, a Google-backed BaaS (Backend-as-a-Service), is beneficial for quickly implementing features like real-time databases, cloud storage, authentication, and push notifications.<br></li>
+      <li><strong class="styled-heading">Data Management and Databases</strong><br><p class="red-background-text">SQLite and Room (Android):</p><hr> For local data storage on Android, knowledge of SQLite and the Room persistence library ensures efficient data management, enabling offline functionality and enhanced user experience.<br>
+        <p class="red-background-text">Core Data (iOS):</p><hr> Understanding Core Data is essential for iOS app developers, as it provides an effective way to store app data locally while supporting complex data structures.<br>
+        <p class="red-background-text">NoSQL Databases (Firebase Firestore, MongoDB):</p><hr> Skills in NoSQL databases like Firestore and MongoDB are essential for apps requiring high scalability, quick real-time updates, and flexible schema management.<br></li>
+      <li><strong class="styled-heading">App Architecture Patterns (MVC, MVVM, MVP)</strong><br><p class="red-background-text">MVC (Model-View-Controller):</p><hr> A strong grasp of the MVC pattern is foundational, as it organizes code logically and improves code maintainability, especially in iOS apps.<br>
+        <p class="red-background-text">MVVM (Model-View-ViewModel):</p><hr> MVVM is commonly used in Android and is particularly useful for apps with complex UIs.<br> It separates logic from UI and is conducive to unit testing and scalability.<br>
+        <p class="red-background-text">MVP (Model-View-Presenter):</p><hr> MVP is helpful in keeping business logic separate from the UI in Android applications, making the codebase modular, easier to maintain, and adaptable to future changes.<br></li>
+      <!-- Add additional points as needed -->
+      <li><strong class="styled-heading">Testing and Debugging</strong><br><p class="red-background-text">Unit Testing:</p><hr> Knowledge of unit testing frameworks like JUnit (Android) and XCTest (iOS) is crucial for ensuring individual components work as expected, reducing bugs and improving code quality.<br>
+        <p class="red-background-text">UI Testing (Espresso, XCTest):</p><hr> Familiarity with UI testing frameworks like Espresso (Android) and XCTest (iOS) ensures the app’s visual and interactive elements function seamlessly.<br>
+        <p class="red-background-text">Debugging Tools:</p> Proficiency with debugging tools like Android Studio’s debugger, Xcode’s Instruments, and tools for network traffic (e.g., Charles Proxy) is essential for identifying and fixing issues efficiently.<br></li>
+      <li><strong class="styled-heading">Version Control (Git)</strong><br><p class="red-background-text">Proficiency in Git</p> (using platforms like GitHub, GitLab, or Bitbucket) is critical for managing code changes, collaborating with teams, and keeping code history organized, especially in agile environments.<br></li>
+      <li><strong class="styled-heading">Cloud Services and DevOps</strong><br><p class="red-background-text">AWS and Azure:</p><hr> Familiarity with cloud services like AWS and Azure for hosting backend services, media files, and supporting scalable databases allows app developers to build highly available and performant applications.<br>
+        <p class="red-background-text">CI/CD (Continuous Integration/Continuous Deployment):</p><hr> Knowledge of CI/CD pipelines, using tools like Jenkins, Bitrise, and GitHub Actions, allows for automated testing and deployment, improving the development cycle and reducing time-to-market.<br></li>
+      <!-- Add additional points as needed -->
+      <li><strong class="styled-heading">Security</strong><br><p class="red-background-text">Data Encryption:</p><hr> Skills in data encryption, both for local data storage and data transmission (e.g., SSL/TLS), ensure user information remains protected and meets regulatory requirements.<br>
+        <p class="red-background-text">Authentication and Authorization (OAuth, JWT):</p><hr> Understanding of secure authentication protocols like OAuth and JWT is essential for managing user access and protecting sensitive app data.<br>
+        <p class="red-background-text">Secure Coding Practices:</p><hr> Knowledge of secure coding practices, such as input validation and safe data storage, is fundamental to prevent vulnerabilities like SQL injection, XSS, and data leaks.<br></li>
+    
+      `
+    };
+
+    // Toggle Flip Animation
+    function toggleFlip(div, section) {
+      const cardInner = div.querySelector('.flip-card-uddit');
+      const toggleButton = div.querySelector('.plus-button');
+      cardInner.classList.toggle('flipped');
+      toggleButton.textContent = cardInner.classList.contains('flipped') ? 'X' : '+';
+    }
+
+    // Show Info Card with relevant content
+    function showInfo(event, section) {
+      event.stopPropagation();
+      const infoCard = document.getElementById("infoCard");
+      document.getElementById("infoContent").innerHTML = skillContent[section];
+      infoCard.classList.add('active');
+      document.addEventListener('click', hideInfo);
+    }
+
+    // Hide Info Card
+    function hideInfo(event) {
+      const infoCard = document.getElementById("infoCard");
+      if (event.target !== infoCard && !infoCard.contains(event.target)) {
+        infoCard.classList.remove('active');
+        document.removeEventListener('click', hideInfo);
+      }
+    }
+  </script>
+
+</body>
+</html>
