@@ -1306,6 +1306,30 @@ body {
       <button class="scroll-button" onclick="scrollToSlider()">Click Me !</button>
     </div>
   </div>
+  <div style="display: flex; justify-content: center; align-items: center; width: 100%; overflow: hidden; position: relative; box-sizing: border-box;">
+    <div id="slider" style="display: flex; overflow: hidden; position: relative; width: 100%; max-width: 100%; margin: 0 auto; white-space: nowrap; box-sizing: border-box;">
+        
+        <a href="https://developer.mozilla.org/docs/Web/HTML" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 Logo"
+                 style="border-radius: 50%; width: 3cm; height: 3cm; margin: 0 10px; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;">
+        </a>
+        
+        <a href="https://developer.mozilla.org/docs/Web/CSS" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 Logo"
+                 style="border-radius: 50%; width: 3cm; height: 3cm; margin: 0 10px; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;">
+        </a>
+        
+        <a href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript Logo"
+                 style="border-radius: 50%; width: 3cm; height: 3cm; margin: 0 10px; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;">
+        </a>
+        
+        <!-- Repeat for other images with the same inline styling and different links -->
+
+    </div>
+</div>
+
+
   <div class="internship-container">
     <div class="internship-title mohan" style="max-width:200px;color:white">Internships</div>
     <div class="internship-slider" id="internshipSlider">
@@ -2256,6 +2280,37 @@ window.addEventListener('resize', () => {
         document.removeEventListener('click', hideInfo);
       }
     }
+   
+    // JavaScript for auto-scrolling effect
+    const slider = document.getElementById('slider');
+    let scrollSpeed = 1;
+
+    function startSlider() {
+        slider.scrollLeft += scrollSpeed;
+        
+        // Loop through the images to find the center image
+        const images = slider.getElementsByTagName('img');
+        const center = slider.scrollLeft + (slider.offsetWidth / 2);
+        
+        for (const img of images) {
+            const imgCenter = img.offsetLeft + (img.offsetWidth / 2);
+            if (Math.abs(center - imgCenter) < img.offsetWidth / 2) {
+                img.style.boxShadow = "0 0 20px 10px rgba(255, 215, 0, 0.8)"; // Glowing effect for center image
+            } else {
+                img.style.boxShadow = "none"; // Remove glow from non-center images
+            }
+        }
+        
+        // Infinite scroll
+        if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+            slider.scrollLeft = 0;
+        }
+        requestAnimationFrame(startSlider);
+    }
+
+    // Start the slider animation
+    requestAnimationFrame(startSlider);
+
   </script>
 
 </body>
